@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9958890203656223 0.09044481095356101 0.004979486597611713 0.11045315362701107
-  position -0.012831983698020744 0.3079819898279703 1.7643517493239345
+  orientation -0.8608412406616097 -0.5073950223797994 -0.038764025079749666 0.17703260667466544
+  position -0.09011837135479533 0.914964083560395 2.527439810426469
 }
 TexturedBackground {
 }
@@ -23,4 +23,60 @@ DEF S_BOX_BOTTOM Solid {
       }
     }
   ]
+}
+DEF S_BOX_FACE Solid {
+  children [
+    Transform {
+      translation -0.45 0.5 0.495
+      children [
+        Shape {
+          appearance DEF A_RED_FACE PBRAppearance {
+            baseColor 0.8 0 0
+          }
+          geometry DEF G_RED_FACE Box {
+            size 0.1 0.9 0.01
+          }
+        }
+        Transform {
+          children [
+            Solid {
+              translation 0.9 0 0
+              children [
+                Shape {
+                  appearance USE A_RED_FACE
+                  geometry Box {
+                    size 0.1 0.9 0.01
+                  }
+                }
+                Solid {
+                  translation -0.45 -0.4 0
+                  rotation 0 0 1 1.5707996938995747
+                  children [
+                    Shape {
+                      appearance USE A_RED_FACE
+                      geometry Box {
+                        size 0.1 0.9 0.01
+                      }
+                    }
+                    Solid {
+                      translation 0.8 0 0
+                      children [
+                        Shape {
+                          appearance USE A_RED_FACE
+                          geometry Box {
+                            size 0.1 0.9 0.01
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(1)"
 }
