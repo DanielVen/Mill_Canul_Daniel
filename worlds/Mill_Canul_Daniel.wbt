@@ -1,0 +1,26 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.9958890203656223 0.09044481095356101 0.004979486597611713 0.11045315362701107
+  position -0.012831983698020744 0.3079819898279703 1.7643517493239345
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+DEF S_BOX_BOTTOM Solid {
+  translation 0 0.025 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.9294117647058824 0.8313725490196079 0
+      }
+      geometry Box {
+        size 1 0.05 1
+      }
+    }
+  ]
+}
