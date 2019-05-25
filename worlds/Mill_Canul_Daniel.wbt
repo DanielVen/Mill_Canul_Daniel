@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9577949010253012 -0.2848851817604854 -0.038332242084552555 0.2791380250307225
-  position 0.033876042764816566 1.0335934315633846 2.9704229265666067
+  orientation -0.394345078555113 0.906196805885891 0.15264110855719906 0.8073675514507
+  position 2.592803827732355 1.4017183437180627 2.2968103978606673
 }
 TexturedBackground {
 }
@@ -34,7 +34,7 @@ DEF S_BOX_FACE Solid {
       children [
         Shape {
           appearance DEF A_RED_FACE PBRAppearance {
-            baseColor 0.8 0 0
+            baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
           }
           geometry DEF G_RED_FACE Box {
             size 0.1 0.9 0.01
@@ -106,4 +106,239 @@ DEF S_BOX_FACE Solid {
     }
   ]
   name "solid(1)"
+}
+DEF S_BOX_FACE2 Solid {
+  translation -0.45 0.5 -0.495
+  children [
+    Group {
+      children [
+        Transform {
+        }
+        Shape {
+          appearance USE A_RED_FACE
+          geometry Box {
+            size 0.1 0.9 0.01
+          }
+        }
+        Transform {
+          translation 0.9 0 0
+          children [
+            Shape {
+              appearance USE A_RED_FACE
+              geometry Box {
+                size 0.1 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 -0.4 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            Shape {
+              appearance USE A_RED_FACE
+              geometry Box {
+                size 0.1 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0.4 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            Shape {
+              appearance USE A_RED_FACE
+              geometry Box {
+                size 0.1 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0 0
+          rotation 0 0 1 0.8554
+          children [
+            Shape {
+              appearance USE A_RED_FACE
+              geometry Box {
+                size 0.07 1.1 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0 0
+          rotation 0 0 1 -0.859
+          children [
+            Shape {
+              appearance USE A_RED_FACE
+              geometry Box {
+                size 0.07 1.1 0.01
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(2)"
+}
+DEF S_BOX_FACE3 Solid {
+  translation -0.495 0.5 0.45
+  rotation 0 1 0 1.5708003061004252
+  children [
+    Group {
+      children [
+        Transform {
+        }
+        Shape {
+          appearance DEF A_ORANGE_FACE PBRAppearance {
+            baseColor 0.9607843137254902 0.4745098039215686 0
+          }
+          geometry Box {
+            size 0.08 0.9 0.01
+          }
+        }
+        Transform {
+          translation 0.9 0 0
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.08 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 -0.4 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.1 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0.4 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.1 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0 0
+          rotation 0 0 1 0.8554
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.07 1.1 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0 0
+          rotation 0 0 1 -0.859
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.07 1.1 0.01
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(3)"
+}
+DEF S_BOX_FACE4 Solid {
+  translation 0.495 0.5 0.45
+  rotation 0 1 0 1.5707996938995747
+  children [
+    Group {
+      children [
+        Transform {
+        }
+        Shape {
+          appearance USE A_ORANGE_FACE
+          geometry Box {
+            size 0.08 0.9 0.01
+          }
+        }
+        Transform {
+          translation 0.9 0 0
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.08 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 -0.4 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.1 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0.4 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.1 0.9 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0 0
+          rotation 0 0 1 0.8554
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.07 1.1 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.45 0 0
+          rotation 0 0 1 -0.859
+          children [
+            Shape {
+              appearance USE A_ORANGE_FACE
+              geometry Box {
+                size 0.07 1.1 0.01
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(4)"
 }
