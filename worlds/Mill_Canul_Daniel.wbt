@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.21195486646428566 0.9511247463960674 0.224581502744824 1.678562503459711
-  position 2.4198972080079995 1.6292590512583354 0.02160797618146515
+  orientation -0.2177898334477149 0.9582007462656417 0.18552336322626437 1.45341507861071
+  position 1.9510377610437242 1.9606636046751684 0.05188196440372324
 }
 TexturedBackground {
 }
@@ -353,4 +353,34 @@ DEF BOX_TOP Solid {
     }
   ]
   name "solid(5)"
+}
+DEF S_CYLINDER Solid {
+  translation 0 1.25 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.12549019607843137 0.2901960784313726 0.5294117647058824
+      }
+      geometry Cylinder {
+        height 0.5
+        radius 0.05
+      }
+    }
+    HingeJoint {
+      endPoint Solid {
+        translation 0 0.3 -0.1
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.9294117647058824 0.8313725490196079 0
+            }
+            geometry Box {
+              size 0.1 0.1 0.5
+            }
+          }
+        ]
+      }
+    }
+  ]
+  name "solid(6)"
 }
