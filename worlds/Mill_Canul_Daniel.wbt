@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.2177898334477149 0.9582007462656417 0.18552336322626437 1.45341507861071
-  position 1.9510377610437242 1.9606636046751684 0.05188196440372324
+  orientation -0.16695186861184974 0.9709059480443739 0.17166453803586587 1.6281272242555898
+  position 4.25336284492298 2.2829048871529136 0.10933728576234986
 }
 TexturedBackground {
 }
@@ -367,8 +367,14 @@ DEF S_CYLINDER Solid {
       }
     }
     HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        minStop 1
+        maxStop -1
+        staticFriction 0.02
+      }
       endPoint Solid {
-        translation 0 0.3 -0.1
+        translation -3.469446951953614e-18 0.29999999999999977 -0.10000000000000002
         children [
           Shape {
             appearance PBRAppearance {
@@ -378,7 +384,57 @@ DEF S_CYLINDER Solid {
               size 0.1 0.1 0.5
             }
           }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 0 1
+              anchor 0 0 -0.25
+              staticFriction 0.01
+            }
+            endPoint Solid {
+              rotation 0 0 1 0
+              children [
+                Group {
+                  children [
+                    Transform {
+                      translation 0 0 -0.25
+                      children [
+                        Shape {
+                          appearance DEF A_MILL PBRAppearance {
+                            baseColor 0.5411764705882353 0.8862745098039215 0.20392156862745098
+                          }
+                          geometry Box {
+                            size 0.1 0.5 0.02
+                          }
+                        }
+                        Transform {
+                          rotation 0 0 1 1.5707996938995747
+                          children [
+                            Shape {
+                              appearance USE A_MILL
+                              geometry Box {
+                                size 0.1 0.5 0.02
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              boundingObject Box {
+                size 0.1 0.5 0.02
+              }
+              physics Physics {
+              }
+            }
+          }
         ]
+        boundingObject Box {
+          size 0.1 0.1 0.5
+        }
+        physics Physics {
+        }
       }
     }
   ]
